@@ -1,0 +1,341 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  overflow-x: scroll;
+  background: #000000;
+  color: #fff;
+  height: auto;
+  width: 100%;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+  
+h1{
+
+  color: white;
+  font-style: italic;
+  width: 400px;
+  height: 50px;
+  padding: 20px;
+  margin: 5px;
+}
+
+h2{
+    margin: 0;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 29px;
+    font-style: italic;
+    text-shadow: 2px 2px #191818;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  p{
+    
+    font-size: 16px;
+    line-height: 29px;
+    text-align: left;
+  }
+
+  ol{
+    display: block;
+    list-style-type: none;
+    text-align: left;
+  }
+ 
+  /*main-image*/
+  .main-image{
+    background: linear-gradient(#0F1219, #78191996, #000000);
+    margin: 0;
+  }
+
+  .image-animation{
+    display: flex;
+  }
+
+  /*image - animation*/
+  .image-animation > div {
+    margin: 10px;
+    padding: 20px;
+    background: rgba(2, 2, 2, 0.4);
+    border: 2px solid orange;
+}
+
+/*info - text*/
+section {
+  font-size: 25px;
+  margin: 0 auto;
+  padding: 25px;  
+  width: 930px;
+  height: 972px;
+  left: 0px;
+  top: 1242px;
+  backdrop-filter: blur(10px);
+  text-align: left;
+  overflow:hidden;
+}
+
+  :root {
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+    
+    --fw-reg: 300;
+    --fw-bold: 500;
+    
+    --clr-light: #fff; 
+    --clr-dark: #303030;
+    --clr-accent: #fff;
+    
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 2rem;
+    
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+.nav {
+    position: relative;
+    font-family: monospace;
+    line-height: 4rem;
+    display: inline-block;
+    margin-top: 0px;
+    padding-top: 150px;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.537);
+    border-left: 1px solid orange;
+    color: #fff;
+    top: 0;
+    bottom: 0;
+    left: 70%;
+    right: 0px;
+    z-index: 1;
+    transform: translateY(-100%);
+    transition: transform 250ms;
+
+}
+
+.nav__list {
+  display: flex;
+  height: 50%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  
+  
+}
+
+ul {
+  display: block;
+  list-style-type: none;
+  text-align: left;
+}
+
+.nav__link {
+  color: inherit;
+  font-size: 3rem;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  border: 2px solid orange;
+
+}
+
+.nav-toggle {
+  position: absolute;
+  padding: .5em;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  z-index: 1000;
+  right: 0;
+  height: 67px;
+  width: 73px;
+  left: 1321px;
+  top: 30px;
+
+}
+
+.nav-open .nav {
+  transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+  position: fixed;
+}
+
+.nav-open .hamburger {
+  transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before {
+  transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+  opacity: 20%;
+}
+
+.hamburger {
+  position: absolute;
+  right: 0;
+  height: 100px;
+  width: 73px;
+  left: 1321px;
+  top: 50px;
+  border-radius: 0px;
+
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  background: var(--clr-accent);
+  color: #fff;
+  width: 1em;
+  height: 3px;
+  border-radius: 1em;
+  transition: transform 250ms ease-in-out;
+}
+
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.hamburger::before { top: 6px; }
+.hamburger::after { bottom: 6px; }
+
+
+
+/**/
+  input[type=text], select, textarea {
+    background-color: #0f1219c1;
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 25px;
+    margin-bottom: 0px;
+    resize: vertical;
+  }
+
+  /*Submit-button*/
+  input[type=submit] {
+    background-color: transparent;
+    color: #fff;
+    padding: 15px 30px;
+    border: 2px solid #fff;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+  }
+
+  /*hover
+  input[type=submit]:hover {
+    color:#fff;
+    background: rgba(110, 205, 237, 0.4);
+    border: 2px solid orange;
+  }*/
+
+  .input[type=submit]:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+  .input[type=submit]:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+  }
+
+  /*Text*/
+  label{
+    font-size: 14px;
+  }
+
+    /*Style the placeholder text in an 
+  <input> form element. */
+  ::placeholder {
+    color:rgba(255, 255, 255, 0.408);
+    font-size: 1rem;
+    text-align: left;
+    font-style: italic;
+    font-variant: small-caps;
+    font-size: 14px;
+  }
+  
+  .placeholder{
+    margin: 25px 400px 5px 400px;
+  }
+  
+  /*contact-form background*/
+  .kontakt {
+    position: absolute;
+    width: 400px;
+    left: 150px;
+    top: 150px;
+    background: rgba(10, 10, 9, 0.426);
+    border: 2px solid #fff;
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+
+  /*background color on text*/
+  #jorden{
+    background: linear-gradient(180deg, rgb(2, 3, 5) -38.94%, rgba(2, 3, 5, 0.5) -0.5%, rgba(13, 125, 162, 0.5) 45.41%, rgba(8, 10, 60, 0.5) 100%);
+    height: auto;
+  }
+  
+  #mars{
+    background: linear-gradient(180deg, #000000 58.16%, #70302f67 79.39%, #9f2a249e 99.09%);
+    height: auto;
+  }
+  #solsystemet{
+    background: linear-gradient(180deg,  #0000001c, rgba(145, 51, 44, 0.725) 67.5%, rgba(147, 26, 15, 0.444) 96.67%);
+    height: auto;
+    
+  }
+
+
+  
